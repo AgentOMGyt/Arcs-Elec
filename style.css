@@ -1,0 +1,423 @@
+* {
+    font-family: 'Poppins';
+    margin: 0px;
+}
+
+
+body {
+    margin: 0px;
+    background-color: #FFEED4;
+}
+
+#hotbar {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    margin-top: 10px;
+    
+}
+
+#hotbar img {
+    height: 100%;
+    margin-left: 2.5%;
+    animation:1s slide-top;
+}
+
+#partner {
+    animation:1s slide-top;
+}
+
+#avis {
+    background-color: #FFE091;
+    color: #6F5513;
+    border-radius: 15px;
+    height: 70px;
+    width: 10%;
+    min-width: 150px;
+    font-weight: 600;
+    right: 2.5%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation:3s slide-top;
+}
+
+.container {
+    display: flex;
+    height: 87%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.grid {
+    display: grid;
+    height: 100%;
+    width: 95%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 20px;
+    background-color: #FFEED4;
+    padding: 8px;
+}
+
+.grid div {
+    background-color: #E8BF98;
+    border-radius: 30px;
+    transition: 0.5s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.grid div:hover {
+    background-color: #FFE091;
+    box-shadow: 2px 2px 16px rgba(235, 206, 65, 0.25);
+}
+
+#elecGen {
+    grid-column: span 2;
+    grid-row: span 3;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    color: #554A2C;
+    font-size: 25px;
+    padding-top: 40px;
+    animation:2s slide-bottom;
+}
+#elecGen img {
+    height: 58%;
+    object-fit: cover;
+    width: 80%;
+    border-radius: 15px;
+}
+#elecgen:hover > .savoirplus {
+    transform: translate(0px, 99%);
+}
+
+#automatisation {
+    grid-column: span 2;
+    grid-row: span 1;
+    display: flex;
+    align-items: center;
+    animation:1.5s slide-bottom;
+    font-weight: 700;
+    color: #554A2C;
+    font-size: 25px;
+    padding-top: 0px;
+}
+#automatisation img {
+    height: 68%;
+    object-fit: cover;
+    margin-top: -60px;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 15px;
+    opacity: 0.5;
+}
+#automatisation p {
+    z-index: 1;
+}
+#automatisation:hover > .savoirplus {
+    transform: translate(0px, -70%);
+}
+
+#domotique {
+    grid-column: span 1;
+    grid-row: span 2;
+    display: flex;
+    align-items: center;
+    animation:2.3s slide-bottom;
+    font-weight: 700;
+    color: #554A2C;
+    font-size: 25px;
+    padding-top: 0px;
+}
+#domotique img {
+    height: 68%;
+    object-fit: cover;
+    margin-top: -60px;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 15px;
+    opacity: 0.5;
+}
+#domotique p {
+    z-index: 1;
+}
+#domotique:hover > .savoirplus {
+    transform: translate(0px, 0%);
+}
+
+#alarme {
+    grid-column: span 1;
+    grid-row: span 4;
+    display: flex;
+    align-items: center;
+    animation:3.2s slide-bottom;
+    font-weight: 700;
+    color: #554A2C;
+    font-size: 25px;
+    padding-top: 0px;
+}
+#alarme img {
+    height: 68%;
+    margin-top: -60px;
+    max-width: 280px;
+    border-radius: 15px;
+    opacity: 0.5;
+}
+#alarme p {
+    z-index: 1;
+}
+#alarme:hover > .savoirplus {
+    transform: translate(0px, 99%);
+}
+
+#borneRecharge {
+    grid-column: span 1;
+    grid-row: span 2;
+    display: flex;
+    align-items: center;
+    animation:2.7s slide-bottom;
+    font-weight: 700;
+    color: #554A2C;
+    font-size: 25px;
+    padding-top: 0px;
+}
+#borneRecharge img {
+    height: 68%;
+    object-fit: cover;
+    margin-top: -60px;
+    width: 80%;
+    border-radius: 15px;
+    opacity: 0.5;
+}
+#borneRecharge p {
+    z-index: 1;
+}
+#borneRecharge:hover > .savoirplus {
+    transform: translate(0px, -70%);
+}
+
+#climat {
+    grid-column: span 2;
+    grid-row: span 2;
+    display: flex;
+    align-items: center;
+    animation:3.5s slide-bottom;
+    font-weight: 700;
+    color: #554A2C;
+    font-size: 25px;
+    padding-top: 0px;
+}
+#climat img {
+    height: 68%;
+    margin-top: -60px;
+    max-width: 280px;
+    border-radius: 15px;
+    opacity: 0.5;
+}
+#climat p {
+    z-index: 1;
+}
+#climat:hover > .savoirplus {
+    transform: translate(0px, -59%);
+}
+
+.savoirplus {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    color: black;
+    padding: 18px 30px;
+    background-color: #FFCB05;
+    border-radius: 15px;
+    transform: translate(0px, 400px);
+    transition: 0.5s;
+}
+
+@media (max-width: 1300px) {
+    .grid p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 600px) {
+    #partner p {
+        display: none;
+    }
+    #partner img {
+        display: none;
+    }
+}
+
+@keyframes slide-bottom {
+    from {
+        transform: translate(0px,1000px);
+        opacity: 0.9;
+    }
+    to {
+        transform: translate(0px,0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-top {
+    from {
+        transform: translate(0px,-100px);
+        opacity: 0.9;
+    }
+    to {
+        transform: translate(0px,0px);
+        opacity: 1;
+    }
+}
+
+#first-plan {
+    width: 100%;
+    height: 10000px;
+    background-color: #FFE6A5;
+    border-radius: 100px;
+    margin-top: 60px;
+    box-shadow: 0px -9px 16px #FFEAB5;
+    padding-top: 600px;
+}
+
+#logo {
+    width: 30%;
+    max-width: 800px;
+    min-width: 300px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    top: 1500px;
+    transition: transform 0.5s ease-in-out;
+    transform-origin: center top;
+    z-index: 1000;
+}
+
+#navbar {
+    width: 100%;
+    height: calc(5vw);
+    max-height: 150px;
+    min-height: 70px;
+    transform: translate(0px, -50px);
+    transition: transform 0.5s ease-in-out, backdrop-filter 0.5s ease-in-out, height 0.5s ease-in-out;
+    position: fixed;
+    top: 0px;
+    background: rgba(255, 230, 165, 0.5); /* Transparence */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* Compatibilité Safari */
+    z-index: 999;
+    box-shadow: 0px 4px 30px rgba(111, 85, 19, 0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.navbar-left, .navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+#navbar a {
+    text-decoration: none;
+    color: #6F5513;
+    font-weight: 900;
+    background-color: #F8D682;
+    border-radius: 20px;
+    padding: 20px 40px;
+    opacity: 0.6;
+    margin: 0 15px;
+    transition: all 0.3s;
+}
+
+#navbar a:hover {
+    opacity: 1;
+    background-color: #FFD700;
+}
+
+#burger {
+    display: none; /* Caché par défaut, visible seulement pour les petits écrans */
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.bar {
+    width: 30px;
+    height: 4px;
+    background-color: #6F5513;
+    border-radius: 10px;
+}
+
+/* Menu burger pour petits écrans */
+@media screen and (max-width: 900px) {
+    #navbar {
+        padding: 0 10px; /* Ajuste le padding pour les petits écrans */
+    }
+
+    .navbar-left, .navbar-right {
+        display: none; /* Masque les éléments de menu */
+    }
+
+    #burger {
+        display: flex; /* Affiche le bouton burger */
+    }
+
+    #navbar.open .navbar-left, #navbar.open .navbar-right {
+        display: flex; /* Affiche les liens quand le menu est ouvert */
+        flex-direction: column; /* Empile les éléments */
+        align-items: center;
+        width: 100%; /* S'assure que le menu prend toute la largeur */
+        position: absolute;
+        top: 70px; /* Déplace le menu en dessous du navbar */
+        left: 0;
+        background: rgba(255, 230, 165, 1);
+        backdrop-filter: blur(10px);
+    }
+
+    /* Espacement suffisant entre les liens */
+    #navbar.open .navbar-left a, #navbar.open .navbar-right a {
+        margin: 15px 0; /* Donne de l'espacement vertical entre les liens */
+        width: 100%; /* Pour s'assurer qu'ils prennent toute la largeur */
+        text-align: center; /* Centre le texte du lien */
+    }
+
+    #navbar.open .navbar-left {
+        order: 1; /* Assure que les boutons de gauche viennent en premier */
+        
+    }
+    
+    #navbar.open .navbar-right {
+        order: 2; /* Les boutons de droite viennent après */
+        margin-top: 188px;
+    }
+
+    #navbar.open #burger .bar {
+        background-color: #FFD700; /* Change la couleur des barres du burger quand le menu est ouvert */
+    }
+
+    .grid {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .grid div {
+        border-radius: 15px;
+    }
+
+    div > .savoirplus {
+        display: none;
+    }
+}
+
