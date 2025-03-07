@@ -1,0 +1,134 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=100%, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+</head>
+<body>
+    <div id="navbar">
+      <!-- Menu Burger -->
+      <div id="burger" class="burger-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+      </div>
+
+      <!-- Liens du Navbar -->
+      <div class="navbar-left">
+          <a id="facebook" href="https://www.facebook.com/people/Arcs-Elec/100054380643071/">FaceBook</a>
+          <a id="num" href="tel:+330483110368">04 83 11 03 68</a>
+      </div>
+      <div class="navbar-right">
+          <a id="mail" href="mailto:titouan.legrall@gmail.com">Mail</a>
+          <a id="adresse">Adresse</a>
+      </div>
+  </div>
+
+    <div id="hotbar">
+        <img src="source/logo.png" alt="logo-arcs-elec">
+        <div id="partner" style="display: flex;flex-direction:column;">
+          <h4 style="color:#E8BF98;">en partenariat avec</h4>
+          <img src="source/somfy.png" alt="somfy-logo" style="width: 120px;">
+        </div>
+        <div id="avis">
+            <h4>9.5/10 | 97 Avis</h4>
+        </div>
+    </div>
+    <div class="grid">
+        <div class="item item-0">
+            <div class="content">
+                <img src="source/1.png" alt="Image 0">
+                <h2>Electricité Générale</h2>
+            </div>
+        </div>
+        <div class="item item-1">
+            <div class="content">
+                <img src="source/5.png" alt="Image 1">
+                <h2>Motorisation</h2>
+            </div>
+        </div>
+        <div class="item item-2">
+            <div class="content">
+                <img src="source/6.png" alt="Image 2">
+                <h2>Alarme</h2>
+            </div>
+        </div>
+        <div class="item item-3">
+            <div class="content">
+                <img src="source/3.png" alt="Image 3">
+                <h2>Climatisation</h2>
+            </div>
+        </div>
+        <div class="item item-4">
+            <div class="content">
+                <img src="source/2.png" alt="Image 4">
+                <h2>Borne de Recharge</h2>
+            </div>
+        </div>
+        <div class="item item-5">
+            <div class="content">
+                <img src="source/4.png" alt="Image 5">
+                <h2>Domotique</h2>
+            </div>
+        </div>
+        
+    </div>
+
+    <div id="text" style="top:1500px;position: absolute;"></div>
+    <img id="logo" src="source/logo.png" alt="logo-arcs-elec">
+    <div id="first-plan">
+      <h3>Un électricien en phase avec vos besoins dans le Var</h3>
+      <p>Arcs Elec est une société qui a été fondée en 2012, à l’initiative de Jean-Paul Benoit. Comme son nom le laisse entendre, notre structure est spécialisée dans le domaine de l’électricité. Ainsi, nous mettons nos compétences en pratique pour répondre aux besoins suivants :</p>
+        <ul>
+            <li>
+            Travaux d’électricité générale : installation de réseaux électriques complets, installation d’équipements électriques, remise en conformité, etc.
+            </li>
+            <li>
+                Maintenance et dépannage électrique
+            </li>
+            <li>
+                Travaux sur courant faible : câblage téléphonique ou informatique, interphonie, etc.
+            </li>
+            <li>
+                Solutions domotiques
+            </li>
+            <li>
+                Alarmes
+            </li>
+            <li>
+                Systèmes de motorisation pour portails
+            </li>
+            <li>
+                etc.
+            </li>
+        </ul>
+        <p>Polyvalentes, nos équipes peuvent s’adapter à tous les contextes. Nous interviendrons donc avec la même efficacité que votre projet concerne une installation neuve, une rénovation ou un dépannage. De même, nos prestations s’adressent autant aux particuliers qu’aux professionnels.
+        La structure Arcs Elec est située à Les Arcs sur Argens dans le département du Var (83). De là, nous pouvons venir au-devant de vos besoins dans un large secteur géographique. N’hésitez pas à nous contacter pour en savoir plus.</p>
+        <a class="savoirplus" href="">En Savoir Plus</a>
+    </div>
+    <div id="second-plan">
+        <h3>Notre plus grande source d’énergie : votre satisfaction</h3>
+        <p>Chez Arcs Elec, nous sommes fiers de la confiance qui nous lie à nos clients les plus fidèles. Nous souhaitons voir là une conséquence du professionnalisme que nous mobilisons dans toutes nos prestations.</br>
+            Cependant, nous sommes persuadés que nos clients restent les plus légitimes à s’exprimer sur la qualité de nos services. C’est dans cet état d’esprit que nous avons adhéré à la solution Plus que PRO. Celle-ci nous permet en effet de vous présenter les évaluations nées de nos multiples interventions. Authentiques, non modérés, ces avis clients vous donneront un aperçu de toute la rigueur à laquelle nous nous conformons au quotidien. Nous vous invitons à les consulter sur notre page dédiée.</p>
+          <a class="savoirplus" href="">En Savoir Plus</a>
+      </div>
+      <div id="map" style="width: 80%; height: 400px; bottom:20px; border-radius: 30px; margin: auto;"></div>  
+      
+      <script>
+        var map = L.map('map').setView([43.46452554787179, 6.481815208955494], 20); // Paris
+        
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+        
+        L.marker([43.46452554787179, 6.481815208955494]).addTo(map)
+            .bindPopup("Arcs Elec")
+            .openPopup();
+        </script>
+</body>
+</html>
