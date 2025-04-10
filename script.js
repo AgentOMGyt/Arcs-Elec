@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     maDiv4.style.height = (window.innerWidth * 0.05) + 'px';
                 } else {
                     maDiv.style.position = 'absolute';
-                    maDiv.style.top = '1500px';
+                    maDiv.style.top = '185vh';
                     maDiv3.style.marginTop = '60px';
                     maDiv.style.transform = 'translateX(-50%) scale(1)';
                     maDiv4.style.transform = 'translateY(-500px)';
