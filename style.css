@@ -345,7 +345,7 @@ body {
 }
 
 #first-plan a {
-    width: 15%;
+    width: 25%;
     height: 30px;
     align-items: center;
     justify-content: center;
@@ -355,10 +355,10 @@ body {
 
 #second-plan {
     width: 100%;
-    height: 1000px;
+    height: 1900px;
     background-color: #FFE8C5;
     border-radius: 100px;
-    margin-top: -500px;
+    margin-top: -50vw;
     box-shadow: 0px -9px 0px #FFE8C5;
     padding-top: 50px;
     animation: slide-bas; /* Animation au scroll ( apparition ) */
@@ -377,8 +377,8 @@ body {
 }
 
 #second-plan p {
-    margin-left: 200px;
-    margin-right: 200px;
+    margin-right: 50px;
+    margin-left: 100px;
     font-size: 17px;
     color: #6F5513;
     animation: slide-left; /* Animation au scroll ( apparition ) */
@@ -386,7 +386,7 @@ body {
 }
 
 #second-plan a {
-    width: 15%;
+    width: 25%;
     height: 30px;
     align-items: center;
     justify-content: center;
@@ -401,7 +401,6 @@ body {
     position: absolute;
     left: 50%;
     transform: translate(-50%, 0%);
-    top: 1500px;
     transition: transform 0.5s ease-in-out;
     transform-origin: center top;
     z-index: 1000;
@@ -477,7 +476,23 @@ body {
     transform: translate(0%, 100px);
     animation: slide-bas3; /* Animation au scroll ( apparition ) */
     animation-timeline: view();
+    transition: all 0.3s;
+    -webkit-transition: all 0.3ss;
     box-shadow: inset 0px -5px 0px 0px #F0C537; /* Ombre intérieure */
+}
+
+.savoirplus:hover {
+    box-shadow: inset 0px -10px 0px 0px #F0C537; /* Ombre intérieure */
+    padding-top: 5px;
+    transform: translateY(89px);
+    padding-bottom: 25px;
+}
+
+.savoirplus:active {
+    box-shadow: inset 0px -1px 0px 0px #F0C537; /* Ombre intérieure */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    transform: translateY(105px);
 }
 
 /* Menu burger pour petits écrans */
@@ -494,6 +509,10 @@ body {
         display: flex; /* Affiche le bouton burger */
     }
 
+    #partner img, #partner h4 {
+        display: none;
+    }
+
     #navbar.open .navbar-left, #navbar.open .navbar-right {
         display: flex; /* Affiche les liens quand le menu est ouvert */
         flex-direction: column; /* Empile les éléments */
@@ -502,8 +521,9 @@ body {
         position: absolute;
         top: 70px; /* Déplace le menu en dessous du navbar */
         left: 0;
-        background: #FFDD85;
+        background: #f3dfae;
         backdrop-filter: blur(10px);
+        height: 150px;
     }
 
     /* Espacement suffisant entre les liens */
@@ -511,6 +531,7 @@ body {
         margin: 15px 0; /* Donne de l'espacement vertical entre les liens */
         width: 100%; /* Pour s'assurer qu'ils prennent toute la largeur */
         text-align: center; /* Centre le texte du lien */
+        background-color: #f1bf3f;
     }
 
     #navbar.open .navbar-left {
@@ -520,7 +541,7 @@ body {
     
     #navbar.open .navbar-right {
         order: 2; /* Les boutons de droite viennent après */
-        margin-top: 188px;
+        margin-top: 120px;
     }
 
     #first-plan h3 {
@@ -546,8 +567,19 @@ body {
     }
     
     #second-plan p {
-        margin-left: 100px;
-        margin-right: 100px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    #second-plan img {
+        display: none;
     }
 }
 
+.domaine {
+    margin: 100px;
+    display: flex;
+    justify-content: center;
+    font-size: 33px;
+    color: #6F5513;
+}
