@@ -399,6 +399,7 @@ body {
     max-width: 800px;
     min-width: 300px;
     position: absolute;
+    top:1200px;
     left: 50%;
     transform: translate(-50%, 0%);
     transition: transform 0.5s ease-in-out;
