@@ -21,6 +21,27 @@ body {
     background-color: #FFE8C5;
 }
 
+#scrollTopBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 10px;
+    z-index: 1200;
+    background-color: rgb(255, 221, 84);
+    text-decoration: none;
+    border: none;
+    padding: 16px 16px;
+    font-size: 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: inset 0px -5px 0px 0px #dfb426; /* Ombre intérieure */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 1;
+  }
+  
+  #scrollTopBtn:hover {
+    transform: scale(1.1);
+  }
+
 #hotbar {
     height: 100px;
     display: flex;
@@ -54,6 +75,7 @@ body {
     align-items: center;
     justify-content: center;
     animation:3s slide-top;
+    text-decoration: none;
 }
 
 .grid {
@@ -102,7 +124,7 @@ body {
 }
 
 .content:hover h2 {
-    font-size: 18px;
+    font-size: 22px;
 }
 
 /* Style du texte */
@@ -114,7 +136,7 @@ body {
     transform: translateX(-50%);
     margin: 0;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 18px;
     color: #6F5513;
     transition: 0.2s;
 }
@@ -395,17 +417,17 @@ body {
 }
 
 #logo {
-    width: 30%;
-    max-width: 800px;
-    min-width: 300px;
     position: absolute;
-    top:1200px;
+    top: 1200px;
     left: 50%;
-    transform: translate(-50%, 0%);
+    transform: translateX(-50%) scale(1); /* le scale par défaut */
+    transform-origin: top center;
+    width: 30%;
+    min-width: 300px;
+    max-width: 800px;
     transition: transform 0.5s ease-in-out;
-    transform-origin: center top;
     z-index: 1000;
-}
+  }
 
 #navbar {
     width: 100%;
@@ -578,12 +600,15 @@ body {
     justify-content: center;
     font-size: 33px;
     color: #6F5513;
+    animation: slide-bas3; /* Animation au scroll ( apparition ) */
+    animation-timeline: view();
 }
 
   #slider {
     display: flex;
     width: max-content;
     animation: scroll-left 130s linear infinite;
+    
   }
 
   #slider::after {
@@ -599,6 +624,7 @@ body {
 .icon-avis {
     height: 40px;
     border-radius: 20px;
+    
 }
 
 .icon-avis path {
@@ -612,6 +638,7 @@ body {
     width: 0.5%;
     height: auto;
     padding: 40px;
+    
 }
 
 .card p {
@@ -657,6 +684,8 @@ body {
     text-decoration: none;
     justify-content: center;
     display: flex;
+    animation: slide-bas3; /* Animation au scroll ( apparition ) */
+    animation-timeline: view();
 }
 
 #content1-1 {
@@ -702,8 +731,6 @@ body {
     translate: 0px -5px;
     background-color: #FFCB05;
     border-radius: 10px;
-    width: 50px;
-    height: 50px;
     margin-left: auto;
     margin-right: 30px;
 }
@@ -719,15 +746,13 @@ body {
   }
   
   .collapsible.open {
-    height: 200px; /* adapte à la taille souhaitée */
+    height: 250px; /* adapte à la taille souhaitée */
   }
 
   /* Mise en page interne */
 .top-left {
-    position: absolute;
-    top: 50px;
-    left: 50px;
-    margin: 0;
+    position: block;
+    margin-right: 100px;
   }
   
   .collapsible.open .bottom-right {
@@ -735,19 +760,40 @@ body {
     bottom: 16px;
     right: -20px;
     z-index: 10; /* Assure qu'elle passe au-dessus */
-  cursor: pointer; /* Affiche la main au survol */
+    cursor: pointer; /* Affiche la main au survol */
+    width: 200px;
+    box-shadow: inset 0px -5px 0px 0px #e1b219; /* Ombre intérieure */
+  }
+
+  .collapsible.open h4 {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    margin: 0;
+  }
+
+  .collapsible.open p {
+    display: block;
+  }
+
+.bottom-right p {
+    display: none;
+    color: #6F5513;
+    margin-left: 10px;
   }
 
   .bottom-right {
     position: block;
     transition: all 1s;
+    height: 50px;
+    width: 50px;
   }
   
   .center-text {
     position: absolute;
     height: 50%;
     width: 80%;
-    top: 40%;
+    top: 30%;
     opacity: 0;
     color: #6F5513;
     transition: all 0.5s;
