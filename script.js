@@ -14,29 +14,29 @@ document.addEventListener('DOMContentLoaded', () => {
     const maDiv2 = document.querySelector('#text');
     const maDiv3 = document.querySelector('#first-plan');
     const maDiv4 = document.querySelector('#navbar');
-
+    
     if (maDiv2) {
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.boundingClientRect.top < 0 && !entry.isIntersecting) {
-                    maDiv.style.position = 'sticky';
-                    maDiv.style.top = '10px';
-                    maDiv3.style.marginTop = '-200px';
-                    maDiv.style.transform = 'translateX(-50%) scale(0.3)';
-                    maDiv4.style.transform = 'translateY(0px)';
-                    maDiv4.style.height = (window.innerWidth * 0.05) + 'px';
-                } else {
-                    maDiv.style.position = 'absolute';
-                    maDiv.style.top = '1200px';
-                    maDiv3.style.marginTop = '60px';
-                    maDiv.style.transform = 'translateX(-50%) scale(1)';
-                    maDiv4.style.transform = 'translateY(-500px)';
-                    maDiv4.style.height = '0px';
-                }
-            });
-        }, { threshold: 0 });
-
-        observer.observe(maDiv2);
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.boundingClientRect.top < 0 && !entry.isIntersecting) {
+            maDiv.style.position = 'sticky';
+            maDiv.style.top = '10px';
+            maDiv.style.transform = 'translateX(-50%) scale(0.3)'; // scale seulement
+            maDiv3.style.marginTop = '-200px';
+            maDiv4.style.transform = 'translateY(0px)';
+            maDiv4.style.height = (window.innerWidth * 0.05) + 'px';
+          } else {
+            maDiv.style.position = 'absolute';
+            maDiv.style.top = '1200px';
+            maDiv.style.transform = 'translateX(-50%) scale(1)'; // reset normal
+            maDiv3.style.marginTop = '60px';
+            maDiv4.style.transform = 'translateY(-500px)';
+            maDiv4.style.height = '0px';
+          }
+        });
+      }, { threshold: 0 });
+    
+      observer.observe(maDiv2);
     }
 
     window.addEventListener('resize', () => {
