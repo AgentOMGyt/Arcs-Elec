@@ -40,7 +40,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     window.addEventListener('resize', () => {
-        console.log('La taille de la fenêtre a changé !');
         const maDiv4 = document.querySelector('#navbar');
         if (maDiv4) {
             maDiv4.style.height = (window.innerWidth * 0.05) + 'px';
