@@ -803,3 +803,7 @@ body {
     color: #6F5513;
     transition: all 0.5s;
   }
+
+  .center-text p {
+    font-size: 13px;
+  }
