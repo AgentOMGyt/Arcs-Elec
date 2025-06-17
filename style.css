@@ -741,18 +741,25 @@ body {
 }
 
 .collapsible {
-    position: relative;
-    height: 70px;
-    overflow: hidden;
-    transition: height 0.5s ease;
-    background: #fffbee;
-    padding: 20px;
-    border-radius: 15px;
-  }
-  
+  position: relative;
+  height: 70px;
+  overflow: hidden;
+  transition: height 0.5s ease;
+  background: #fffbee;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.collapsible.open {
+  height: 250px;
+}
+
+/* ✅ Quand la largeur de l'écran est inférieure à 200px */
+@media (max-width: 520px) {
   .collapsible.open {
-    height: 250px; /* adapte à la taille souhaitée */
+    height: 450px;
   }
+}
 
   /* Mise en page interne */
 .top-left {
