@@ -959,3 +959,20 @@ body {
 #imageModal.show img {
   transform: scale(1);
 }
+
+#closeModalBtn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 2.5rem;
+  cursor: pointer;
+  z-index: 1010; /* plus que la modal */
+  transition: color 0.3s ease;
+}
+
+#closeModalBtn:hover {
+  color: #ffdddd;
+}
