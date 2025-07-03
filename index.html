@@ -2122,6 +2122,26 @@
       <a class="savoirplus" style="margin-bottom: 300px;" target="_blank" href="https://www.google.com/search?client=opera-gx&hs=oAS&sca_esv=ccb525ef5073e364&sxsrf=AHTn8zqBmrU5K4EHeFugkNkPjgCuN9SJ0Q:1744968831150&uds=ABqPDvztZD_Nu18FR6tNPw2cK_RRksYyJbmr1Qh0GuheCIczMOvvr8Gju7LafoYS4dc5KElXMmomWYLdSnN_lSBsU0nOTxykAy_sSIA3tVLhNCxf9Eh-Ox-4VxYsDD8FPkmElblVYovH&q=Arcs+Elec+Avis&si=APYL9bs7Hg2KMLB-4tSoTdxuOx8BdRvHbByC_AuVpNyh0x2KzZrxaU72KNbWoVyGs_Ckwp98OPTKcGQwa4xoIeWbmrGtvDOcQRGzR74BCHCl9TqKuF0mtsrBcG0w93Rw3NAeiJivpvAx&hl=fr-FR&sa=X&ved=2ahUKEwiEuMy6o-GMAxWCUaQEHYj1DNEQ_4MLegQIMhAP&biw=1540&bih=1042&dpr=1.25">Envoyer votre avis</a>
     </div>
 
+    <h2 class="domaine">Notre Galerie</h2>
+    <div class="grid1">
+    <div class="item1 item1-0"><img src="source/galerie/353c63b8-1.JPG" alt=""></div>
+      <div class="item1 item1-1"><img src="source/galerie/IMG-1042.jpg" alt=""></div>
+      <div class="item1 item1-2"><img src="source/galerie/IMG-1333.jpg" alt=""></div>
+      <div class="item1 item1-3"><img src="source/galerie/IMG-1335.jpg" alt=""></div>
+      <div class="item1 item1-4"><img src="source/galerie/IMG-1341.jpg" alt=""></div>
+      <div class="item1 item1-5"><img src="source/galerie/IMG-4450.JPG" alt=""></div>
+      <div class="item1 item1-6"><img src="source/galerie/IMG_5909.jpg" alt=""></div>
+      <div class="item1 item1-7"><img src="source/galerie/IMG_5910.jpg" alt=""></div>
+      <div class="item1 item1-8"><img src="source/galerie/IMG_5915.jpg" alt=""></div>
+      <div class="item1 item1-9"><img src="source/galerie/IMG_5957.jpg" alt=""></div>
+      <div class="item1 item1-10"><img src="source/galerie/Installation d'éclairage d'un magasin à Vidauban.jpg" alt=""></div>
+      <div class="item1 item1-11"><img src="source/galerie/Installation électrique d'un magasin à Vidauban.jpg" alt=""></div>
+      
+  </div>
+<div id="imageModal">
+  <img src="" alt="Agrandissement">
+</div>
+
     <a href="#hotbar" id="scrollTopBtn">
       <span style="color: #6F5513;font-size: 30px;" class="material-symbols-outlined">
         arrow_upward
@@ -2174,6 +2194,40 @@ document.querySelectorAll('.activity').forEach(link => {
       });
     }
   });
+
+
+
+
+  const modal = document.getElementById('imageModal');
+  const modalImg = modal.querySelector('img');
+
+  document.querySelectorAll('.item1 img').forEach(img => {
+    img.addEventListener('click', () => {
+      modalImg.src = img.src;
+      modal.classList.add('show');
+    });
+  });
+
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.classList.remove('show');
+      // Attendre la fin de la transition avant de supprimer le src (sinon clignote)
+      setTimeout(() => {
+        modalImg.src = '';
+      }, 400);
+    }
+  });
+
+  // Bonus : fermer avec touche Échap
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('show')) {
+      modal.classList.remove('show');
+      setTimeout(() => {
+        modalImg.src = '';
+      }, 400);
+    }
+  });
+  
         </script>
 </body>
 </html>
