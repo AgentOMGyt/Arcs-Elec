@@ -2227,6 +2227,29 @@ document.querySelectorAll('.activity').forEach(link => {
       }, 400);
     }
   });
+
+  document.addEventListener('DOMContentLoaded', () => {
+  const modal = document.createElement('div');
+  modal.id = 'imageModal';
+  modal.innerHTML = '<img src="" alt="Zoom">';
+  document.body.appendChild(modal);
+
+  const modalImg = modal.querySelector('img');
+
+  document.querySelectorAll('.content img').forEach(img => {
+    img.addEventListener('click', () => {
+      modalImg.src = img.src;
+      modal.classList.add('show');
+    });
+  });
+
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.classList.remove('show');
+      setTimeout(() => modalImg.src = '', 400);
+    }
+  });
+});
   
         </script>
 </body>
