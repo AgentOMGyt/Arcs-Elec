@@ -2139,6 +2139,7 @@
       
   </div>
 <div id="imageModal">
+  <button id="closeModalBtn" aria-label="Fermer la modal">&times;</button>
   <img src="" alt="Agrandissement">
 </div>
 
@@ -2228,6 +2229,14 @@ document.querySelectorAll('.activity').forEach(link => {
     }
   });
   
+  const closeModalBtn = document.getElementById('closeModalBtn');
+
+closeModalBtn.addEventListener('click', () => {
+  modal.classList.remove('show');
+  setTimeout(() => {
+    modalImg.src = '';
+  }, 400);
+});
         </script>
 </body>
 </html>
